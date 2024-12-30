@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        input,
+        button {
+            margin: 5px 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 0px;
+            border: 1px solid #888;
+            width: 80%;
+            height: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .tab-content img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Object Creator</h1>
+    <div>
+        <input type="number" id="rank" placeholder="Rank (int)">
+        <input type="text" id="class" placeholder="Class">
+        <input type="text" id="type" placeholder="Type">
+        <input type="text" id="label" placeholder="Label">
+        <button onclick="createObject()">Create Object</button>
+    </div>
+    <p>Objects created: <span id="objectCount">0</span></p>
+    <button onclick="submitObjects()">Submit</button>
+
+    <div id="imagePopup" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeImagePopup()">&times;</span>
+            <div class="tab">
+                <!-- Tab buttons will be dynamically added here -->
+            </div>
+            <div class="tab-content">
+                <!-- Tab content (images) will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script>
+
+    </script>
+
+
+
+
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
